@@ -56,6 +56,7 @@ fun GyroscopeDemo() {
                         painter = painterResource(id = R.drawable.ic_gyroscope_24dp), contentDescription = null,
                         modifier = Modifier.size(150.dp), tint = Color.White,
                     )
+                    Text(text = "Karthik Chitrapu", fontSize = 16.sp)
                 }
 
                 Spacer(modifier = Modifier.height(420.dp))

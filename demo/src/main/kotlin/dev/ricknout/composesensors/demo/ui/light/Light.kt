@@ -67,6 +67,7 @@ fun LightDemo() {
                         painter = painterResource(id = R.drawable.ic_light_24dp), contentDescription = null,
                         modifier = Modifier.size(150.dp), tint = Color.White,
                     )
+                    Text(text = "Karthik Chitrapu", fontSize = 16.sp)
                 }
                 Spacer(modifier = Modifier.height(40.dp))
 

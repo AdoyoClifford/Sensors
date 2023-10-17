@@ -19,6 +19,7 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import dev.ricknout.composesensors.demo.R
 import dev.ricknout.composesensors.demo.model.Demo
 import dev.ricknout.composesensors.demo.model.getSensorDetails
@@ -52,6 +53,7 @@ fun PressureDemo() {
                         painter = painterResource(id = R.drawable.ic_accelerometer_24dp), contentDescription = null,
                         modifier = Modifier.size(150.dp), tint = Color.White,
                     )
+                    Text(text = "Karthik Chitrapu", fontSize = 16.sp)
                 }
 
                 Text(

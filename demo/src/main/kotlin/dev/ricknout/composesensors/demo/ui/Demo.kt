@@ -1,6 +1,7 @@
 package dev.ricknout.composesensors.demo.ui
 
 import android.hardware.Sensor
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.BoxWithConstraintsScope
@@ -19,9 +20,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import dev.ricknout.composesensors.demo.R
 import dev.ricknout.composesensors.demo.model.Demo
 import dev.ricknout.composesensors.demo.model.getSensorDetails
 
@@ -49,6 +52,7 @@ fun Sensor(
                 .fillMaxSize()
                 .padding(paddingValues = paddingValues),
         ) {
+
 
             Text(
                 modifier = Modifier

@@ -2,6 +2,7 @@ package dev.ricknout.composesensors.demo.ui
 
 import androidx.compose.animation.Crossfade
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -36,6 +37,7 @@ import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import dev.ricknout.composesensors.JlResDimens
 import dev.ricknout.composesensors.demo.R
 import dev.ricknout.composesensors.demo.model.Demo
@@ -55,7 +57,9 @@ import dev.ricknout.composesensors.demo.ui.relativehumidity.RelativeHumidityDemo
 fun SensorApp(onItemClick: (demo: Demo) -> Unit) {
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior()
     Scaffold(
-        modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection).background(Color.LightGray),
+        modifier = Modifier
+            .nestedScroll(scrollBehavior.nestedScrollConnection)
+            .background(Color.LightGray),
         topBar = {
             CenterAlignedTopAppBar(
                 navigationIcon = {
@@ -69,9 +73,15 @@ fun SensorApp(onItemClick: (demo: Demo) -> Unit) {
                 title = { Text(text = stringResource(id = R.string.app_name)) },
                 scrollBehavior = scrollBehavior,
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(containerColor = Color.Transparent),
+                actions = {
+                    Image(painter = painterResource(id = R.drawable.background), contentDescription = null,
+                        modifier = Modifier.size(96.dp),
+                        )
+                },
             )
         },
     ) { paddingValues ->
+
         LazyVerticalStaggeredGrid(
             columns = StaggeredGridCells.Fixed(3),
             modifier = Modifier
@@ -81,6 +91,9 @@ fun SensorApp(onItemClick: (demo: Demo) -> Unit) {
 
             ) {
             val demos = Demo.values().toList().filter { demo -> demo != Demo.NONE }
+            item {
+                Text(text = "Karthik Chitrapu", fontSize = 16.sp)
+            }
             items(demos) { demo ->
                 CustomListItem(
                     headlineContent = { Text(text = demo.title) },
