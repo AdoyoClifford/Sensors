@@ -132,31 +132,7 @@ fun CustomListItem(
     Box(
         modifier = Modifier
             .size(165.dp)
-//            .border(
-//                brush = Brush.verticalGradient(
-//                    listOf(
-//                        MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f),
-//                        MaterialTheme.colorScheme.onSurface.copy(alpha = 0.3f),
-//                    ),
-//                ),
-//                width = JlResDimens.dp1,
-//                shape = RoundedCornerShape(
-//                    topStart = JlResDimens.dp16, topEnd = JlResDimens.dp16,
-//                    bottomStart = JlResDimens.dp16, bottomEnd = JlResDimens.dp16,
-//                ),
-//        ).background(
-//            brush = Brush.linearGradient(
-//                listOf(
-//                    JLThemeBase.colorPrimary.copy(alpha = 0.2f),
-////                    JLThemeBase.colorPrimary30,
-//                    JLThemeBase.colorPrimary.copy(alpha = 0.0f),
-////                    JLThemeBase.colorPrimary20,
-//                ),
-//                start = Offset(0f, 0f),
-//                end = Offset(0f, Float.POSITIVE_INFINITY)
-//            )
-//        )
-        //    ),
+
     ) {
         Column(
             modifier = modifier

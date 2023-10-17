@@ -19,7 +19,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import dev.ricknout.composesensors.demo.model.Demo
 import dev.ricknout.composesensors.demo.model.getSensorDetails
 
@@ -53,6 +55,8 @@ fun Sensor(
                     .padding(16.dp)
                     .align(Alignment.CenterStart),
                 text = value,
+                fontSize = 24.sp,
+                color = Color(0xFF277ED0),
             )
             content()
         }

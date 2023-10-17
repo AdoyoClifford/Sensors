@@ -46,7 +46,7 @@ fun ProximityDemo() {
         val value = sensorValue.value
         Sensor(
             demo = Demo.PROXIMITY,
-            value = "$value cm",
+            value = "",
         ) {
 
             val getSensor = getSensorDetails(sensorType = android.hardware.Sensor.TYPE_PROXIMITY)
@@ -56,7 +56,9 @@ fun ProximityDemo() {
                 verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally,
             ) {
                 Row(
-                    modifier = Modifier.fillMaxWidth().background(Color(0xFF277ED0)),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .background(Color(0xFF277ED0)),
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.Start,
                 ) {
@@ -65,8 +67,11 @@ fun ProximityDemo() {
                         modifier = Modifier.size(150.dp), tint = Color.White,
                     )
                 }
+                Spacer(modifier = Modifier.height(40.dp))
 
-                Spacer(modifier = Modifier.height(420.dp))
+                Text(text = "Proximity: $value", color = Color(0xFF277ED0), fontSize = 30.sp)
+
+                Spacer(modifier = Modifier.height(260.dp))
 
                 Column (
                     modifier = Modifier.padding(16.dp)
@@ -121,8 +126,8 @@ fun ProximityDemo() {
             val contentColor = LocalContentColor.current
             Canvas(modifier = Modifier.fillMaxSize()) {
                 drawCircle(
-                    color = contentColor,
-                    radius = radius,
+                    color = Color(0xFF277ED0),
+                    radius = radius + 20,
                     center = center,
                 )
             }

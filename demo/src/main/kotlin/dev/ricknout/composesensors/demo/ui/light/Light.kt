@@ -70,24 +70,18 @@ fun LightDemo() {
                 }
                 Spacer(modifier = Modifier.height(40.dp))
 
-                Text(
-                    text = "$value lux",
-                    fontSize = 50.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = Color.Blue,
-                    textAlign = TextAlign.Start,
-                )
+                Text(text = "Proximity: $value", color = Color(0xFF277ED0), fontSize = 30.sp)
 
                 Spacer(modifier = Modifier.height(260.dp))
 
-                Column(
-                    modifier = Modifier.padding(16.dp),
-                ) {
+                Column (
+                    modifier = Modifier.padding(16.dp)
+                ){
                     Text(
                         text = "Sensor Details",
                         fontWeight = FontWeight.Bold,
                         fontSize = 30.sp,
-                        color = Color.Blue,
+                        color = Color.Blue
                     )
                     Text(
                         text = buildAnnotatedString {
