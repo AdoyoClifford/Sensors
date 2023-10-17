@@ -123,23 +123,23 @@ fun LightDemo() {
 
             val contentColor = LocalContentColor.current
             val radius = with(LocalDensity.current) { 10.dp.toPx() }
-//            Canvas(modifier = Modifier.fillMaxSize()) {
-//                drawCircle(
-//                    color = contentColor,
-//                    radius = radius,
-//                    center = center,
-//                )
-//                val gradientRadius = radius + (size.minDimension - radius) * ratio.value
-//                drawCircle(
-//                    brush = Brush.radialGradient(
-//                        colors = listOf(contentColor, Color.Transparent),
-//                        radius = gradientRadius,
-//                        center = center,
-//                    ),
-//                    radius = gradientRadius,
-//                    center = center,
-//                )
-//            }
+            Canvas(modifier = Modifier.fillMaxSize()) {
+                drawCircle(
+                    color = Color(0xFF277ED0),
+                    radius = radius,
+                    center = center,
+                )
+                val gradientRadius = radius + (size.minDimension - radius) * ratio.value
+                drawCircle(
+                    brush = Brush.radialGradient(
+                        colors = listOf(Color(0xFF277ED0), Color(0xFF277ED0)),
+                        radius = gradientRadius,
+                        center = center,
+                    ),
+                    radius = value,
+                    center = center,
+                )
+            }
         }
     } else {
         NotAvailableDemo(demo = Demo.LIGHT)
